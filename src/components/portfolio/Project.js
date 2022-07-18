@@ -10,10 +10,10 @@ function Project(props) {
             
             <div className="d-flex flex-column align-items-center">
                 
-                {project.github && <a className="text-info" href={project.github} target="_blank">GitHub Repository</a>}
+                {project.github && <a className="text-info my-3" href={project.github} target="_blank">GitHub Repository</a>}
 
 
-                {project.deploy && <a className="text-info" href={project.deploy} target="_blank">Deployed Application</a>}
+                {project.deploy && <a className="text-info my-3" href={project.deploy} target="_blank">Deployed Application</a>}
             </div>
             
         </section>

@@ -8,7 +8,7 @@ function Portfolio(props) {
         <section className="d-flex flex-column align-items-center">
             <h2 className="text-light">Portfolio</h2>
 
-            <div className="d-flex flex-row flex-wrap">
+            <div className="d-flex flex-row flex-wrap justify-content-center">
                 {projects.map(project => {
                     return (
                         <Card

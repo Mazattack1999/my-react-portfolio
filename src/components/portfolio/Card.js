@@ -10,7 +10,7 @@ function Card(props) {
 
 
     return (
-        <div className="card d-flex flex-column align-items-center w-25" onClick={handleClick} >
+        <div className="card d-flex flex-column align-items-center w-25 mx-2 mt-2" onClick={handleClick} >
             <img className="card-img-top" src={project.color} alt={`${project.name} screenshot`}/>
             <div className="card-body">
                 <h3 className="card-title">{project.name}</h3>
