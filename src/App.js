@@ -3,6 +3,7 @@ import {useState} from 'react';
 
 import Nav from './components/Nav';
 import About from './components/About';
+import Footer from './components/Footer';
 
 function App() {
   // navigation tabs
@@ -41,7 +42,7 @@ function App() {
       <main className="bg-secondary">
         {currentTab.name === "About Me" && <About></About>}
       </main>
-
+      <Footer />
     </>
   );
 }

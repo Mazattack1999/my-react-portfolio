@@ -5,7 +5,7 @@ function Nav(props) {
     const {tabs, currentTab, setCurrentTab} = props;
 
     return (
-        <header className="d-flex flex-column px-1 bg-dark justify-content-between align-items-center">
+        <header className="d-flex flex-column px-1 bg-dark justify-content-between align-items-center text-center">
             <h1 className="text-light d-inline">Micah Zahn</h1>
 
             <nav>

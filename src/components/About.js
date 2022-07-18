@@ -1,9 +1,7 @@
 
 
-function About(props) {
-    // parse out props
-    // const {tabs, currentTab, setCurrentTab} = props;
-
+function About() {
+    
     return (
         <section className="d-flex flex-column align-items-center">
             <h2 className="text-light">About Me</h2>
