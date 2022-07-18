@@ -2,7 +2,7 @@
 
 function Nav(props) {
     // parse out props
-    const {tabs, currentTab, setCurrentTab} = props;
+    const {tabs, currentTab, setCurrentTab, setViewingProject} = props;
 
     return (
         <header className="d-flex flex-column px-1 bg-dark justify-content-between align-items-center text-center">
@@ -14,10 +14,11 @@ function Nav(props) {
                         return (
                             <li className="mx-3" key={tab.name}>
                                 <span 
-                                className="text-info" 
+                                className={currentTab.name === tab.name ? `text-light` : `text-info`} 
                                 href={tab.link}
                                 onClick={() => {
                                     setCurrentTab(tab)
+                                    setViewingProject(false)
                                 }}
                                 
                                 >{tab.name}</span>
