@@ -1,7 +1,8 @@
 import './App.css';
 import {useState} from 'react';
 
-import Nav from './components/Nav.js';
+import Nav from './components/Nav';
+import About from './components/About';
 
 function App() {
   // navigation tabs
@@ -37,8 +38,8 @@ function App() {
       ></Nav>
 
       {/* Main body */}
-      <main>
-
+      <main className="bg-secondary">
+        {currentTab.name === "About Me" && <About></About>}
       </main>
 
     </>
