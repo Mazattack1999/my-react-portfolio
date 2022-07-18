@@ -62,6 +62,15 @@ function Contact() {
 
                 <button className="btn bg-dark text-light mt-2" type="submit">Submit</button>
             </form>
+
+            {/* contact information */}
+            <div className="mt-4 d-flex flex-column align-items-center">
+                <h3 className="text-light">Contact Info:</h3>
+                <div className="d-flex flex-column align-items-center">
+                    <a className="text-info" href="tel:8032385708">(803)238-5708</a>
+                    <a className="text-info"href="mailto:micah.a.zahn@gmail.com" target="_blank">micah.a.zahn@gmail.com</a>
+                </div>
+            </div>
     
         </section>
     )
