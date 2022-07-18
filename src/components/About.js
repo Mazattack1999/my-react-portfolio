@@ -26,19 +26,8 @@ function About() {
                 I have enrolled in an online coding boot camp focused on full-stack web development in which I am set to graduate in early August of 2022.
                 </p>
             </div>
-
-            
-
-            
-
-            
-
-            
         </section>
-        
     )
-
-
 }
 
 export default About;

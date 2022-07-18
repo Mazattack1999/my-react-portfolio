@@ -4,6 +4,7 @@ import {useState} from 'react';
 import Nav from './components/Nav';
 import About from './components/About';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 function App() {
   // navigation tabs
@@ -39,8 +40,12 @@ function App() {
       ></Nav>
 
       {/* Main body */}
-      <main className="bg-secondary">
-        {currentTab.name === "About Me" && <About></About>}
+      <main className="bg-secondary py-2">
+        {/* About Me section */}
+        {currentTab.name === "About Me" && <About />}
+
+        {/* Contact section */}
+        {currentTab.name === "Contact Me" && <Contact />}
       </main>
       <Footer />
     </>
