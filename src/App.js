@@ -35,7 +35,9 @@ const projects = [
   {
     name: 'Password Generator',
     tools: 'HTML, CSS, JavaScript',
-    color: require('./assets/images/password-generator.png')
+    color: require('./assets/images/password-generator.png'),
+    github: "https://github.com/Mazattack1999/password-generator",
+    deploy: "https://mazattack1999.github.io/password-generator/"
   }
 ]
 
@@ -69,7 +71,9 @@ const projects = [
         projects={projects}
         /> 
         : 
-        <Project />
+        <Project 
+        currentProject={currentProject}
+        />
         )}
 
         {/* Contact section */}
