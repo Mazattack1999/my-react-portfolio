@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import About from './components/About';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
+import Resume from './components/Resume';
 
 function App() {
   // navigation tabs
@@ -46,6 +47,9 @@ function App() {
 
         {/* Contact section */}
         {currentTab.name === "Contact Me" && <Contact />}
+
+        {/* Resume section */}
+        {currentTab.name === "Resume" && <Resume />}
       </main>
       <Footer />
     </>
