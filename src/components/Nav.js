@@ -1,6 +1,9 @@
-import {Link} from 'react-router-dom';
+import {Link, NavLink, useLocation} from 'react-router-dom';
+
+
 
 function Nav(props) {
+    console.log(useLocation().pathname.split('/')[1]);
     // parse out props
     const {tabs, currentTab, setCurrentTab, setViewingProject} = props;
 
@@ -11,18 +14,19 @@ function Nav(props) {
             <nav>
                 <ul className="d-flex flex-row">
                     {tabs.map(tab => {
+                        console.log(tab.link)
                         return (
                             <li className="mx-3" key={tab.name}>
-                                <Link
+                                <NavLink
                                 to={tab.link}
-                                className={currentTab.name === tab.name ? `text-light` : `text-info`} 
+                                className={useLocation().pathname === tab.link ? `text-light` : `text-info`}
                                 href={tab.link}
                                 onClick={() => {
                                     setCurrentTab(tab)
                                     setViewingProject(false)
                                 }}
                                 
-                                >{tab.name}</Link>
+                                >{tab.name}</NavLink>
                             </li>
                         )
                     })}

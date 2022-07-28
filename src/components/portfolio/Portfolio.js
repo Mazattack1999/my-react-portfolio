@@ -2,6 +2,8 @@ import Card from './Card';
 
 function Portfolio(props) {
 
+  const {setCurrentProject, setViewingProject} = props;
+
     // portfolio projects
 const projects = [
     {
@@ -54,8 +56,6 @@ const projects = [
       deploy: "https://mazattack1999.github.io/password-generator/"
     }
   ]
-    // parse props
-    // const {projects, setCurrentProject, setViewingProject} = props
     
     return (
         <section className="d-flex flex-column align-items-center">
@@ -66,6 +66,8 @@ const projects = [
                     return (
                         <Card
                         project={project}
+                        setViewingProject={setViewingProject}
+                        setCurrentProject={setCurrentProject}
                         key={project.name}
                         />
                     )

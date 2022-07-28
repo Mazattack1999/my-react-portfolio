@@ -1,6 +1,6 @@
 import './App.css';
 import {useState} from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, useParams} from 'react-router-dom';
 
 import Nav from './components/Nav';
 import About from './components/About';
@@ -30,9 +30,7 @@ function App() {
         link: "/resume"
     }
 ]
-
-
-
+  
   const [currentTab, setCurrentTab] = useState(tabs[0]);
 
   const [currentProject, setCurrentProject] = useState(null);
@@ -52,10 +50,11 @@ function App() {
       {/* Main body */}
       <main className="bg-secondary py-2">
       <Routes>
+          <Route path="/" element={<About />} />
           <Route path="/about-me" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />}>
-            <Route path="" element={<Portfolio />} />
-            <Route path=":project" element= {<Project />} /> 
+          <Route path="/portfolio">
+            <Route path="" element={<Portfolio currentProject={currentProject} setCurrentProject={setCurrentProject}/>} />
+            <Route path=":project" element= {<Project currentProject={currentProject}/>} /> 
           </Route>
           <Route path="/contact-me" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
