@@ -4,7 +4,7 @@ import {Link, NavLink, useLocation} from 'react-router-dom';
 
 function Nav(props) {
     // parse out props
-    const {tabs, setCurrentTab} = props;
+    const {tabs} = props
 
     return (
         <header className="d-flex flex-column px-1 bg-dark justify-content-between align-items-center text-center">
@@ -18,11 +18,6 @@ function Nav(props) {
                                 <NavLink
                                 to={tab.link}
                                 className={useLocation().pathname === tab.link ? `text-light` : `text-info`}
-                                href={tab.link}
-                                onClick={() => {
-                                    setCurrentTab(tab)
-                                }}
-                                
                                 >{tab.name}</NavLink>
                             </li>
                         )

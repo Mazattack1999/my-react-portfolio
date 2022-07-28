@@ -44,17 +44,17 @@ function App() {
 
       {/* Main body */}
       <main className="bg-secondary py-2">
-      <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/my-react-portfolio" element={<About />} />
-          <Route path="/about-me" element={<About />} />
-          <Route path="/portfolio">
-            <Route path="" element={<Portfolio currentProject={currentProject} setCurrentProject={setCurrentProject}/>} />
-            <Route path=":project" element= {<Project currentProject={currentProject}/>} /> 
+        <Routes>
+          <Route to="/my-react-portfolio">
+            <Route path="" element={<About />} />
+            <Route path="about-me" element={<About />} />
+            <Route path="portfolio">
+              <Route path="" element={<Portfolio currentProject={currentProject} setCurrentProject={setCurrentProject}/>} />
+              <Route path=":project" element= {<Project currentProject={currentProject}/>} /> 
+            </Route>
+            <Route path="contact-me" element={<Contact />} />
+            <Route path="resume" element={<Resume />} />
           </Route>
-          <Route path="/contact-me" element={<Contact />} />
-          <Route path="/resume" element={<Resume />} />
-          
         </Routes>
       </main>
       <Footer />

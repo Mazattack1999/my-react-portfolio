@@ -7,7 +7,6 @@ function Card(props) {
 
     function handleClick(e) {
         setCurrentProject(project);
-        // setViewingProject(true);
     }
 
 
