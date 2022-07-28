@@ -1,4 +1,4 @@
-
+import {Link} from 'react-router-dom';
 
 function Nav(props) {
     // parse out props
@@ -13,7 +13,8 @@ function Nav(props) {
                     {tabs.map(tab => {
                         return (
                             <li className="mx-3" key={tab.name}>
-                                <span 
+                                <Link
+                                to={tab.link}
                                 className={currentTab.name === tab.name ? `text-light` : `text-info`} 
                                 href={tab.link}
                                 onClick={() => {
@@ -21,7 +22,7 @@ function Nav(props) {
                                     setViewingProject(false)
                                 }}
                                 
-                                >{tab.name}</span>
+                                >{tab.name}</Link>
                             </li>
                         )
                     })}

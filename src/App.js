@@ -1,5 +1,6 @@
 import './App.css';
 import {useState} from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import Nav from './components/Nav';
 import About from './components/About';
@@ -30,58 +31,7 @@ function App() {
     }
 ]
 
-// portfolio projects
-const projects = [
-  {
-    name: 'Book Bits',
-    tools: 'HTML, CSS, JavaScript, Bootstrap, Node.js, Express.js, MySQL',
-    color: require('./assets/images/book-bits.png'),
-    github: "https://github.com/Mazattack1999/book-bits",
-    deploy: "https://book-bits-blog.herokuapp.com/"
-  },
-  {
-    name: 'Meditation Buddy',
-    tools: 'HTML, CSS, JavaScript, Bulma.io',
-    color: require('./assets/images/meditation-buddy.png'),
-    github: "https://github.com/Mazattack1999/meditation-buddy",
-    deploy: "https://mazattack1999.github.io/meditation-buddy/"
-  },
-  {
-    name: 'Tech Blog',
-    tools: 'CSS, JavaScript, Node.js, MySQL',
-    color: require('./assets/images/tech-blog.png'),
-    github: "https://github.com/Mazattack1999/tech-blog",
-    deploy: "https://safe-meadow-45436.herokuapp.com/"
-  },
-  {
-    name: 'Weather Dashboard',
-    tools: 'HTML, CSS, JavaScript, Moment.js',
-    color: require('./assets/images/weather-dashboard.png'),
-    github: "https://github.com/Mazattack1999/weather-dashboard",
-    deploy: "https://mazattack1999.github.io/weather-dashboard/"
-  },
-  {
-    name: 'Work Day Scheduler',
-    tools: 'HTML, CSS, JavaScript, jQuery, Bootstrap, Moment.js, Font Awesome',
-    color: require('./assets/images/calendar.png'),
-    github: "https://github.com/Mazattack1999/calendar",
-    deploy: "https://mazattack1999.github.io/calendar/"
-  },
-  {
-    name: 'Code Quiz',
-    tools: 'HTML, CSS, JavaScript',
-    color: require('./assets/images/code-quiz.png'),
-    github: "https://github.com/Mazattack1999/code-quiz",
-    deploy: "https://mazattack1999.github.io/code-quiz/"
-  },
-  {
-    name: 'Password Generator',
-    tools: 'HTML, CSS, JavaScript',
-    color: require('./assets/images/password-generator.png'),
-    github: "https://github.com/Mazattack1999/password-generator",
-    deploy: "https://mazattack1999.github.io/password-generator/"
-  }
-]
+
 
   const [currentTab, setCurrentTab] = useState(tabs[0]);
 
@@ -90,22 +40,35 @@ const projects = [
 
 
   return (
-    <>
+    <Router>
       {/* Navigation and header */}
       <Nav
-      tabs={tabs}
-      currentTab={currentTab}
-      setCurrentTab={setCurrentTab}
-      setViewingProject={setViewingProject}
+        tabs={tabs}
+        currentTab={currentTab}
+        setCurrentTab={setCurrentTab}
+        setViewingProject={setViewingProject}
       ></Nav>
 
       {/* Main body */}
       <main className="bg-secondary py-2">
+      <Routes>
+          <Route path="/about-me" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />}>
+            <Route path="" element={<Portfolio />} />
+            <Route path=":project" element= {<Project />} /> 
+          </Route>
+          <Route path="/contact-me" element={<Contact />} />
+          <Route path="/resume" element={<Resume />} />
+          
+        </Routes>
+
+
+
         {/* About Me section */}
-        {currentTab.name === "About Me" && <About />}
+        {/* {currentTab.name === "About Me" && <About />} */}
 
         {/* Portfolio section */}
-        {currentTab.name === "Portfolio" && 
+        {/* {currentTab.name === "Portfolio" && 
         (!viewingProject ? 
         <Portfolio
         setCurrentProject={setCurrentProject}
@@ -116,16 +79,16 @@ const projects = [
         <Project 
         currentProject={currentProject}
         />
-        )}
+        )} */}
 
         {/* Contact section */}
-        {currentTab.name === "Contact Me" && <Contact />}
+        {/* {currentTab.name === "Contact Me" && <Contact />} */}
 
         {/* Resume section */}
-        {currentTab.name === "Resume" && <Resume />}
+        {/* {currentTab.name === "Resume" && <Resume />} */}
       </main>
       <Footer />
-    </>
+    </Router>
   );
 }
 
