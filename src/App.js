@@ -1,6 +1,6 @@
 import './App.css';
 import {useState} from 'react';
-import {BrowserRouter as Router, Routes, Route, useParams} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import Nav from './components/Nav';
 import About from './components/About';
@@ -31,10 +31,8 @@ function App() {
     }
 ]
   
-  const [currentTab, setCurrentTab] = useState(tabs[0]);
 
   const [currentProject, setCurrentProject] = useState(null);
-  const [viewingProject, setViewingProject] = useState(false);
 
 
   return (
@@ -42,9 +40,6 @@ function App() {
       {/* Navigation and header */}
       <Nav
         tabs={tabs}
-        currentTab={currentTab}
-        setCurrentTab={setCurrentTab}
-        setViewingProject={setViewingProject}
       ></Nav>
 
       {/* Main body */}
@@ -60,31 +55,6 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           
         </Routes>
-
-
-
-        {/* About Me section */}
-        {/* {currentTab.name === "About Me" && <About />} */}
-
-        {/* Portfolio section */}
-        {/* {currentTab.name === "Portfolio" && 
-        (!viewingProject ? 
-        <Portfolio
-        setCurrentProject={setCurrentProject}
-        setViewingProject={setViewingProject}
-        projects={projects}
-        /> 
-        : 
-        <Project 
-        currentProject={currentProject}
-        />
-        )} */}
-
-        {/* Contact section */}
-        {/* {currentTab.name === "Contact Me" && <Contact />} */}
-
-        {/* Resume section */}
-        {/* {currentTab.name === "Resume" && <Resume />} */}
       </main>
       <Footer />
     </Router>

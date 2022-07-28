@@ -2,7 +2,7 @@ import Card from './Card';
 
 function Portfolio(props) {
 
-  const {setCurrentProject, setViewingProject} = props;
+  const {setCurrentProject} = props;
 
     // portfolio projects
 const projects = [
@@ -66,7 +66,6 @@ const projects = [
                     return (
                         <Card
                         project={project}
-                        setViewingProject={setViewingProject}
                         setCurrentProject={setCurrentProject}
                         key={project.name}
                         />

@@ -1,21 +1,22 @@
-import {Link} from 'react-router-dom';
+import {Link, Navigate} from 'react-router-dom';
 
 function Card(props) {
     // parse props
-    const {project, setCurrentProject, setViewingProject} = props
+    const {project, setCurrentProject} = props
     
 
-    function handleClick() {
+    function handleClick(e) {
         setCurrentProject(project);
-        setViewingProject(true);
-        console.log(currentProject);
+        // setViewingProject(true);
     }
 
 
     return (
         <Link
         to={`/portfolio/${project.name}`}
-        className="card d-flex flex-column align-items-center w-25 mx-2 mt-2" onClick={handleClick} >
+        project={project}
+        className="card d-flex flex-column align-items-center w-25 mx-2 mt-2" onClick={handleClick}>
+        
             <img className="card-img-top" src={project.color} alt={`${project.name} screenshot`}/>
             <div className="card-body">
                 <h3 className="card-title">{project.name}</h3>
