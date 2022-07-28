@@ -26,7 +26,7 @@ This website also serves as a submission to an assignment testing students' skil
 - Inspiration and code snippets from Univeristy of Wisconsin Coding Bootcamp "Photo Portfolio" module assigment. 
 
 ## Website Link
-https://mazattack1999.github.io/my-react-portfolio/
+https://enigmatic-sea-15020.herokuapp.com/
 
 ## Screenshot
 ![Website Screenshot](/src/assets/images/react-portfolio-screenshot.png)
