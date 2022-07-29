@@ -1,0 +1,14 @@
+.card-body h3 {
+    font-size: 20px;
+}
+
+.card-body p {
+    font-size: 15px;
+}
+
+.project-header {
+    bottom: 10%;
+    left: 0;
+    border-radius: 0 5px 5px 0;
+    max-width: 85%;
+}

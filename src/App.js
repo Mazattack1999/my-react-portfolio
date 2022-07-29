@@ -45,16 +45,21 @@ function App() {
       {/* Main body */}
       <main className="bg-secondary py-2">
         <Routes>
-          <Route to="/my-react-portfolio">
             <Route path="" element={<About />} />
             <Route path="about-me" element={<About />} />
             <Route path="portfolio">
               <Route path="" element={<Portfolio currentProject={currentProject} setCurrentProject={setCurrentProject}/>} />
-              <Route path=":project" element= {<Project currentProject={currentProject}/>} /> 
+              {/* If currentProject is not null, show project, else show portfolio */}
+              <Route path=":project" element={
+              currentProject ? 
+              <Project currentProject={currentProject}/>
+              : 
+              <Portfolio />
+            } /> 
             </Route>
             <Route path="contact-me" element={<Contact />} />
             <Route path="resume" element={<Resume />} />
-          </Route>
+            <Route path="*" element={<About />} />
         </Routes>
       </main>
       <Footer />

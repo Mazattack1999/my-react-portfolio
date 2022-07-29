@@ -61,7 +61,7 @@ const projects = [
         <section className="d-flex flex-column align-items-center">
             <h2 className="text-light">Portfolio</h2>
 
-            <div className="d-flex flex-row flex-wrap justify-content-center">
+            <div className="row d-flex flex-row flex-wrap justify-content-center">
                 {projects.map(project => {
                     return (
                         <Card

@@ -2,7 +2,7 @@ function Footer() {
 
     return (
         <footer className="bg-dark d-flex f-row justify-content-center row py-4">
-            <div className="d-flex flex-row justify-content-around col-sm-9 col-md-7 col-lg-3">
+            <div className="d-flex flex-row justify-content-around col-sm-9 col-lg-3">
                 {/* Github Link */}
                 <a 
                 href="https://github.com/Mazattack1999" 
