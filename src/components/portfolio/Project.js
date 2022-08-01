@@ -6,7 +6,7 @@ function Project(props) {
         <section className="d-flex flex-column align-items-center">
             <h2 className="text-light">{project.name}</h2>
 
-            <img className="card-img-top" src={project.color || require('../../assets/images/backend-placeholder.jpg')} alt={`${project.name} screenshot`}/>
+            <img className="card-img-top w-75" src={project.color || require('../../assets/images/backend-placeholder.jpg')} alt={`${project.name} screenshot`}/>
             
             <div className="d-flex flex-column align-items-center">
                 

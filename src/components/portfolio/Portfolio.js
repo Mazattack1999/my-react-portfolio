@@ -28,6 +28,13 @@ const projects = [
       deploy: "https://safe-meadow-45436.herokuapp.com/"
     },
     {
+      name: 'Budget Tracker',
+      tools: 'HTML, CSS, JavaScript, Node.js, Mongoose, MongoDB',
+      color: require('../../assets/images/budget-tracker.png'),
+      github: "https://github.com/Mazattack1999/PWA-budget-tracker",
+      deploy: "https://safe-beach-90151.herokuapp.com/"
+    },
+    {
       name: 'Weather Dashboard',
       tools: 'HTML, CSS, JavaScript, Moment.js',
       color: require('../../assets/images/weather-dashboard.png'),
@@ -54,6 +61,26 @@ const projects = [
       color: require('../../assets/images/password-generator.png'),
       github: "https://github.com/Mazattack1999/password-generator",
       deploy: "https://mazattack1999.github.io/password-generator/"
+    },
+    {
+      name: 'Social Network API',
+      tools: 'JavaScript, Node.js, Mongoose, MongoDB',
+      github: "https://github.com/Mazattack1999/social-network-api",
+    },
+    {
+      name: 'E-Commerce Backend',
+      tools: 'JavaScript, Node.js, Sequelize, MySQL',
+      github: "https://github.com/Mazattack1999/e-commerce-backend",
+    },
+    {
+      name: 'Employee Tracker',
+      tools: 'JavaScript, Node.js, MySQL',
+      github: "https://github.com/Mazattack1999/employee-tracker",
+    },
+    {
+      name: 'Team Profile Generator',
+      tools: 'HTML, CSS, Font Awesome, JavaScript, Node.js',
+      github: "https://github.com/Mazattack1999/team-profile-generator",
     },
     {
       name: 'ReadMe Generator',
