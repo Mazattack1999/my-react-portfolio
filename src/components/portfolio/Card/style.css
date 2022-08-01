@@ -11,4 +11,5 @@
     left: 0;
     border-radius: 0 5px 5px 0;
     max-width: 85%;
+    box-shadow: 5px 5px 5px black;
 }

@@ -54,6 +54,11 @@ const projects = [
       color: require('../../assets/images/password-generator.png'),
       github: "https://github.com/Mazattack1999/password-generator",
       deploy: "https://mazattack1999.github.io/password-generator/"
+    },
+    {
+      name: 'ReadMe Generator',
+      tools: 'JavaScript, Node.js',
+      github: "https://github.com/Mazattack1999/readme-generator",
     }
   ]
     
